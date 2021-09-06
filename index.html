@@ -7,12 +7,12 @@
     <title>5 Day Weather Dashboard</title>
     <!--Bootstrap styleing link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/fontawesome.min.css"
-    <link rel="stylesheet" href="./script.js">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <header class="jumbotron container-fluid mt-2 text-center p-2 ">
+    <header class="jumbotron container-fluid my-2 text-center p-2 ">
         <h1><strong>Weather Dashboard</strong></h1>
     </header>
 
@@ -23,7 +23,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" id="search-city" aria-label="City Search" aria-describedby="search-button">
                     <div class="input-group-append">
-                        <button class="btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                        <button class="btn bg-primary text-light" id="search-button"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
                 <button class="btn btn-primary" type="button" id="clear-history">Clear History</button>
@@ -32,46 +32,51 @@
                 </ul>
             </div>
             <div class="col-sm-8">
-                <div class="row ml-12 border border-dark rounded">
-                    <div class="col-sm-12" id="current-weather">
-                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
-                        <p>Temperature:<span class="current" id="temperature"></span></p>
-                        <p>Humidity:<span class="current" id="humidity"></span></p>
-                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
-                        <p>UV Index:<span class="current bg-danger rounded p-2 text-white" id="uv-index"></span></p>
+                <div class="row ml-12">
+                    <section class="col-sm-12 border border-dark rounded my-2" id="current-weather">
+                        <h2 class="city-name mb-1 mt-2 bolder" id="current-city">Current Conditions</h2>
+                        <p>Temperature: <span class="current" id="temperature"></span></p>
+                        <p>Humidity: <span class="current" id="humidity"></span></p>
+                        <p>Wind Speed: <span class="current" id="wind-speed"></span></p>
+                        <p>UV Index: <span class="current pl-2 bg-danger rounded p-2 text-white" id="uv-index"></span></p>
 
-                    </div>
-                    <section class="col-sm-12" id="future-weather">
-                        <h3>5 Day FOrecast:</h3>
-                        <section class="row text-light">
+                    </section>
+                    <section class="col-sm-12 border border-dark rounded" id="future-weather">
+                        <h3 class="mt-1">5 Day Forecast:</h3>
+                        <section class="row text-light d-flex justify-content-around">
                             <card class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="fDate0"></p>
-                                <p id="fImg0"></p>
-                                <p>Temp:<span id="fTemp0"></span></p>
+                                <p class="text-center h4" id="fDate0"></p>
+                                <p class="text-center" id="fImg0"></p>
+                                <p>High:<span id="fHigh0"></span></p>
+                                <p>Low:<span id="fLow0"></span></p>
                                 <p>Humidity:<span id="fHumidity0"></span></p>
                             </card>
                             <card class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="fDate1"></p>
-                                <p id="fImg1"></p>
-                                <p>Temp:<span id="fTemp1"></span></p>
+                                <p class="text-center h4" id="fDate1"></p>
+                                <p class="text-center" id="fImg1"></p>
+                                <p>Temp:<span id="fHigh1"></span></p>
+                                <p>Low:<span id="fLow1"></span></p>
                                 <p>Humidity:<span id="fHumidity1"></span></p>
                             </card>
                             <card class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="fDate2"></p>
-                                <p id="fImg2"></p>
-                                <p>Temp:<span id="fTemp2"></span></p>
+                                <p class="text-center h4" id="fDate2"></p>
+                                <p class="text-center" id="fImg2"></p>
+                                <p>Temp:<span id="fHigh2"></span></p>
+                                <p>Low:<span id="fLow2"></span></p>
                                 <p>Humidity:<span id="fHumidity2"></span></p>
                             </card>
                             <card class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="fDate3"></p>
-                                <p id="fImg3"></p>
-                                <p>Temp:<span id="fTemp3"></span></p>
+                                <p class="text-center h4" id="fDate3"></p>
+                                <p class="text-center" id="fImg3"></p>
+                                <p>Temp:<span id="fHigh3"></span></p>
+                                <p>Low:<span id="fLow3"></span></p>
                                 <p>Humidity:<span id="fHumidity3"></span></p>
                             </card>
                             <card class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="fDate4"></p>
-                                <p id="fImg4"></p>
-                                <p>Temp:<span id="fTemp4"></span></p>
+                                <p class="text-center h4" id="fDate4"></p>
+                                <p class="text-center" id="fImg4"></p>
+                                <p>Temp:<span id="fHigh4"></span></p>
+                                <p>Low:<span id="fLow4"></span></p>
                                 <p>Humidity:<span id="fHumidity4"></span></p>
                             </card>
                         </section>
@@ -80,8 +85,8 @@
             </div>
         </div>
     </main>
-    <footer class="mt-5 p-3 text-center bg-light">
-        Weather Dashboard &copy 2021
+    <footer class="mt-5 p-3 text-center">
+        Weather Dashboard by: Kyle Lux
         
     </footer>
     <!--JQuery JS script links-->

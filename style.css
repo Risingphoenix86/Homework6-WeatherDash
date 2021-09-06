@@ -1,4 +1,47 @@
+*{
+    box-sizing: border-box;
+}
 header {
+    background-color: #404040;
+    color: white;
+}
+body {
+    background-color: slategray;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+h1{
+    font-size: 4rem;
+}
+h2 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+h3{
+    font-weight: bold;
+}
+.forecast{
+    
+    font-size: 0.9em;
+}
+span{
+    font-size: 1em;
+}
+li:hover{
+    background-color: lightslategray;
+    text-decoration: underline;
+}
+#current-weather {
+    background-color: skyblue;
+}
+#future-weather {
+    background-color: skyblue;
+}
+p {
+    margin-bottom: 8px;
+}
+footer {
     background-color: #404040;
     color: white;
 }
